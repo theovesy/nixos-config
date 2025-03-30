@@ -10,6 +10,7 @@
 
     shellAliases = {
       v = "vim";
+      update = "sudo nixos-rebuild switch";
     };
 
     history.size = 10000;
