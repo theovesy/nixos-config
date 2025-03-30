@@ -4,7 +4,7 @@
 
   imports = [
     ./zsh.nix
-  ]
+  ];
 
   home.username = "theo";
   home.homeDirectory = "/home/theo";
