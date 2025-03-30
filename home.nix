@@ -4,6 +4,17 @@
   home.username = "theo";
   home.homeDirectory = "/home/theo";
 
+  home.pointerCursor = {
+    package = pkgs.vanilla-dmz;
+    name = "Vanilla-DMZ";
+    size = 48;
+    gtk.enable = true;
+    x11 = {
+      enable = true;
+      defaultCursor = true;
+    };
+  };
+
   # git configuration
   programs.git = {
     enable = true;
