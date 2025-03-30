@@ -82,6 +82,7 @@
     home-manager
     pipewire
     helix
+    starship
   ];
 
   environment.variables.EDITOR = "vim";

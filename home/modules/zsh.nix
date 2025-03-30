@@ -19,7 +19,16 @@
     oh-my-zsh = {
       enable = true;
       plugins = [ "git" "sudo" ];
-      theme = "agnoster";
+      theme = "blinks";
     };
   }; 
+   
+  # Starship
+  programs.starship = {
+    enable = true;
+    settings = {
+      add_newline = true;
+      line_break.disabled = true;
+    };
+  };
 }
