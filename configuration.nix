@@ -70,14 +70,18 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.theo = {
-     isNormalUser = true;
-     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
-     packages = with pkgs; [
-       tree
-     ];
-   };
+  users = {
+    defaultUserShell = pkgs.zsh;
 
+    users.theo = {
+       isNormalUser = true;
+       extraGroups = [ "networkmanager" "wheel" ]; # Enable ‘sudo’ for the user.
+       packages = with pkgs; [
+       ];
+    };
+  };
+
+   programs.zsh.enable = true;
    programs.firefox.enable = true;
    programs.hyprland.enable = true;
    programs.hyprland.withUWSM = true;
