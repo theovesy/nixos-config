@@ -11,10 +11,10 @@
 
 	  # Font
       font = {
-        size = 12;
+        size = 18;
         normal = {
           family = "JetBrains Mono";
-          style = "Bold";
+          # style = "Bold";
         };
       };
       scrolling.multiplier = 5;

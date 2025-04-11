@@ -47,6 +47,20 @@
   };
 
   programs.zsh.enable = true;
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
+  };
+  programs.nvf = {
+    enable = true;
+    settings = {
+      vim.theme.enable = true;
+      vim.theme.name = "catppuccin";
+      vim.theme.style = "mocha";
+
+      vim.languages.nix.enable = true;
+    };
+  };
   programs.firefox.enable = true;
   programs.hyprland.enable = true;
   programs.hyprland.withUWSM = true;

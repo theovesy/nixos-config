@@ -30,5 +30,9 @@
 
   home.stateVersion = "24.11";
 
+  # not workin ----
+  # catppuccin.enable = true;
+  # catppuccin.flavor = "mocha";
+
   programs.home-manager.enable = true;
 }
