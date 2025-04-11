@@ -13,7 +13,7 @@
       font = {
         size = 18;
         normal = {
-          family = "JetBrains Mono";
+          family = "FiraCode";
           # style = "Bold";
         };
       };

@@ -2,12 +2,14 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, lib, pkgs, inputs, ... }:
+{ pkgs, ... }:
 
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      # Nvim configuration
+      ./nvf-configuration.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -41,26 +43,10 @@
     users.theo = {
        isNormalUser = true;
        extraGroups = [ "networkmanager" "wheel" ]; # Enable ‘sudo’ for the user.
-       packages = with pkgs; [
-       ];
     };
   };
 
   programs.zsh.enable = true;
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-  };
-  programs.nvf = {
-    enable = true;
-    settings = {
-      vim.theme.enable = true;
-      vim.theme.name = "catppuccin";
-      vim.theme.style = "mocha";
-
-      vim.languages.nix.enable = true;
-    };
-  };
   programs.firefox.enable = true;
   programs.hyprland.enable = true;
   programs.hyprland.withUWSM = true;
@@ -79,6 +65,7 @@
   environment.shells = with pkgs; [ zsh ];
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    tree
     wget
     git
     alacritty
@@ -99,13 +86,16 @@
     starship
   ];
 
-  environment.variables.EDITOR = "vim";
+  environment.variables.EDITOR = "nvim";
 
   fonts.packages = with pkgs; [
     jetbrains-mono
     noto-fonts
     noto-fonts-emoji
     font-awesome
+    (nerdfonts.override { fonts = [ "FiraCode" ]; })
+    fira-code
+    fira-code-symbols
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
