@@ -29,6 +29,10 @@
     settings = {
       add_newline = true;
       line_break.disabled = true;
+      character = {
+      success_symbol = "[](bold green) ";
+      error_symbol = "[✗](bold red) ";
+      };
     };
   };
 }

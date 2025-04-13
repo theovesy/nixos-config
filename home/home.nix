@@ -27,6 +27,14 @@
     userEmail = "theov@tuta.io";
   };
 
+  # direnv for dev with flakes
+  programs.direnv = {
+    enable = true;
+    enableZshIntegration = true;
+    nix-direnv.enable = true;
+  };
+
+  programs.zsh.enable = true;
 
   home.stateVersion = "24.11";
 

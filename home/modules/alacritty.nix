@@ -1,10 +1,10 @@
-{ configs, ... }:
 {
   programs.alacritty = {
     enable = true;
 
     # custom settings
     settings = {
+      general.import = [ ./catppuccin-mocha.toml ];
       window.opacity = 0.95;
       
       env.TERM = "xterm-256color";
@@ -20,7 +20,7 @@
       scrolling.multiplier = 5;
       # selection.save_to_clipboard = true;
 
-	  # Theme "thelovelace"
+	  /* # Theme "thelovelace"
       colors.primary.background = "#1d1F28";
       colors.primary.foreground = "#FDFDFD";
 
@@ -40,7 +40,7 @@
       colors.bright.blue    = "#FF8037";
       colors.bright.magenta = "#556FFF";
       colors.bright.cyan    = "#3FDCEE";
-      colors.bright.white   = "#BEBEC1";
+      colors.bright.white   = "#BEBEC1"; */
     };
   };
 }

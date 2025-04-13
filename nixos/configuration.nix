@@ -84,6 +84,8 @@
     pipewire
     helix
     starship
+    yazi
+    bat
   ];
 
   environment.variables.EDITOR = "nvim";

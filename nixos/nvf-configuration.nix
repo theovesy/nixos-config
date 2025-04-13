@@ -6,6 +6,7 @@
         # Settings
         viAlias = true;
         vimAlias = true;
+        useSystemClipboard = true;
         filetree.nvimTree.setupOpts = {
           view.relativenumber = true;
         };
