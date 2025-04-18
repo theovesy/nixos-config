@@ -9,7 +9,9 @@
     syntaxHighlighting.enable = true;
 
     shellAliases = {
-      v = "vim";
+      v = "nvim";
+      vi = "nvim";
+      vim = "nvim";
       update = "sudo nixos-rebuild switch";
     };
 
@@ -28,7 +30,7 @@
     enable = true;
     settings = {
       add_newline = true;
-      line_break.disabled = true;
+      # line_break.disabled = true;
       character = {
       success_symbol = "[](bold green) ";
       error_symbol = "[✗](bold red) ";

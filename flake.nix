@@ -3,7 +3,8 @@
 
   inputs = {
     # NixOS official package source, using the nixos-24.11 branch
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
+    # nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     # catppuccin theme
     catppuccin.url = "github:catppuccin/nix";
@@ -13,7 +14,7 @@
 
     # home-manager for user config
     home-manager = {
-      url = "github:nix-community/home-manager/release-24.11";
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
  };

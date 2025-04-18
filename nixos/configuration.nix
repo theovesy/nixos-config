@@ -22,13 +22,7 @@
 
   networking.hostName = "nixos"; # Define your hostname.
   # Pick only one of the below networking options.
-  networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-  # networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
-  networking.wireless.networks = {
-   Albatross = {
-     psk = "tQg6djm4fwFmfrki";
-   };
-  };
+  networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
 
   # Set your time zone.
   time.timeZone = "Europe/Paris";
@@ -86,6 +80,8 @@
     starship
     yazi
     bat
+    imv
+    networkmanager
   ];
 
   environment.variables.EDITOR = "nvim";
@@ -95,9 +91,9 @@
     noto-fonts
     noto-fonts-emoji
     font-awesome
-    (nerdfonts.override { fonts = [ "FiraCode" ]; })
     fira-code
     fira-code-symbols
+    nerd-fonts.fira-code
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
